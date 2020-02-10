@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto" bindtap="wordTap">{{motto}}</text>
+  </view>
+  <view>
+    <map class='map-view'
+       id='mymap'
+       enable-3D="{{true}}"
+       markers="{{markers}}"
+       longitude='120.73971984065929'
+       latitude='31.26412172942719'></map>
+  </view>
+  <video
+  id="myVideo"
+  src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+  controls="{{false}}"
+  event-model="bubble"
+  show-fullscreen-btn="{{true}}"
+  >
+    <cover-view class="controls">
+      <cover-view class="play" bindtap="play">
+        <cover-image class="img" src="../../images/icon_play.png" />
+      </cover-view>
+      <cover-view class="pause" bindtap="pause">
+        <cover-image class="img" src="../../images/icon_pause.png" />
+      </cover-view>
+      <cover-view class="time">{{playTime}}</cover-view>
+    </cover-view>
+  </video> 
+  <view>
+    <image src='../../images/mount.jpg' class='b-img'></image>
+  </view>
+
+  <import src="../template/item.wxml"/>
+  <template is="item" data="{{text: 'forbar'}}" />
+</view>

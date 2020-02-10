@@ -1,0 +1,72 @@
+<!--pages/study.wxml-->
+<view>
+  <navigator
+    url="/pages/logs/logs"
+    hover-class="navigator-hover"
+    class='navigator-st'
+  >
+    日志页面
+  </navigator>
+  <navigator
+    url="/pages/scroll/scroll"
+    hover-class="navigator-hover"
+    class='navigator-st'
+  >
+    scroll-view
+  </navigator>
+
+  <view class="navigator-st" hover-class="navigator-hover" bindtap='goSwiperView'>
+    swiper
+  </view>
+
+  <navigator
+    url="/pages/icon/icon"
+    hover-class="navigator-hover"
+    class='navigator-st'
+  >
+    基础内容组件
+  </navigator>
+  <navigator
+    url="/pages/form/form"
+    hover-class="navigator-hover"
+    class='navigator-st'
+  >
+    表单组件（form）
+  </navigator>
+  <navigator
+    url="/pages/canvas/canvas"
+    hover-class="navigator-hover"
+    class='navigator-st'
+  >
+    Canvas组件
+  </navigator>
+  <view bindtap="clickRelaunch" class='navigator-st'>重启页面</view>
+
+  <view bindtap="showToast" class='navigator-st'>弹框</view>
+  <view bindtap="showModal" class='navigator-st'>打开模态框</view>
+  <view bindtap="showLoad" class='navigator-st'>打开Loading</view>
+  <view bindtap="showActionSheet" class='navigator-st'>打开AcitionSheet</view>
+  <view bindtap="openAnimation" class='navigator-st'>Animation</view>
+  <view bindtap="openAlbum" class='navigator-st'>打开相册</view>
+  <camera
+  device-position="back"
+  flash="off"
+  binderror="error"
+  style="width: 100%; height: 300px;display: none"
+></camera>
+  <view bindtap="openCamera" class='navigator-st'>打开相机</view>
+  <view bindtap="openDocument" class='navigator-st'>打开文档</view>
+  <view bindtap="obtainAddress" class='navigator-st'>获取用户收货地址</view>
+  <view bindtap="callPhone" class='navigator-st'>拨打电话</view>
+  <view bindtap="openDialog" class='navigator-st'>打开自定义Dialog</view>
+  <view bindtap="showLoad" class='navigator-st'>打开Loading</view>
+  <dialog id='dialog' 
+      title='我是标题' 
+      content='恭喜你，学会了小程序组件' 
+      cancelText='知道了' 
+      confirm='谢谢你'
+      bind:cancelEvent="_cancelEvent"  
+      bind:confirmEvent="_confirmEvent">
+  </dialog>
+  <image mode="widthFix" src="{{src}}"></image>
+</view>

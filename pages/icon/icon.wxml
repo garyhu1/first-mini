@@ -1,0 +1,32 @@
+<view class="group">
+  <block wx:for="{{iconSize}}">
+    <icon type="success" size="{{item}}" />
+  </block>
+</view>
+
+<view class="group">
+  <block wx:for="{{iconType}}">
+    <icon type="{{item}}" size="40" />
+  </block>
+</view>
+
+<view class="group">
+  <block wx:for="{{iconColor}}">
+    <icon type="success" size="40" color="{{item}}" />
+  </block>
+</view>
+
+<progress class='progress-i' percent="20" show-info />
+<progress class='progress-i' percent="40" stroke-width="12" />
+<progress class='progress-i' percent="60" color="pink" />
+<progress class='progress-i' percent="80" activeColor="#DE9531" active />
+
+<rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
+
+<view class="btn-area">
+  <view class="body-view">
+    <text>{{text}}</text>
+    <button bindtap="add">add line</button>
+    <button bindtap="remove">remove line</button>
+  </view>
+</view>

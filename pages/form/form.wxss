@@ -1,0 +1,16 @@
+.section {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.section__title {
+  margin-bottom: 10px;
+  color: rgb(124, 32, 32);
+}
+
+.picker{
+  background-color: rgb(136, 130, 130); 
+  height: 40px;
+  line-height: 40px;
+  color: #FFF;
+}

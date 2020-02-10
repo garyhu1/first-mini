@@ -1,0 +1,21 @@
+.top-pic {
+  width: 100%;
+  height: 200px;
+}
+
+.user-info {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f0aaE0;
+}
+
+.flex-layout {
+  background-color: #f0aaE0;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  border-bottom: 1px rgb(37, 32, 32) solid;
+}
